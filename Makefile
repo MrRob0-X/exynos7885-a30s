@@ -1,7 +1,7 @@
 VERSION = 4
 PATCHLEVEL = 4
 SUBLEVEL = 177
-EXTRAVERSION = -MrRobin_Ho_Od
+EXTRAVERSION =
 NAME = Blurry Fish Butt
 
 # *DOCUMENTATION*
@@ -390,9 +390,10 @@ LINUXINCLUDE    := \
 KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
-		   -w \
 		   -fno-strict-aliasing -fno-common \
+		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
+		   -Werror \
 		   -std=gnu89 $(call cc-option,-fno-PIE)
 
 KBUILD_AFLAGS_KERNEL :=
